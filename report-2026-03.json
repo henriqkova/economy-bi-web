@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-28T15:00:00.000Z",
+  "empresa": "Economy Assessoria",
+  "periodo": "Março/2026",
+  "year": 2026,
+  "month": 3,
+  "filter": "realizado",
+  "secoes": {
+    "visao_geral": {
+      "title": "Visão Geral",
+      "analysis": "Março de 2026 consolidou a trajetória ascendente da Economy Assessoria, com receitas de R$ 3.608.000,00 e despesas de R$ 3.133.000,00, resultando em lucro operacional de R$ 475.000,00, o melhor resultado mensal do primeiro trimestre. O desempenho confirma a tendência de melhoria contínua iniciada em fevereiro, com as 9 filiais operando em ritmo crescente de geração de receita e mantendo os custos em patamares controlados.\n\nO resultado acumulado do primeiro trimestre atinge R$ 515.000,00, revertendo completamente o impacto negativo de janeiro e posicionando a companhia em trajetória positiva para o segundo trimestre. A margem líquida de março, de aproximadamente 13,2%, representa o ponto mais alto do trimestre e reflete a maturação das carteiras de dívidas adquiridas no início do ano, que passaram a gerar receitas de parcelas em volume crescente nas operações distribuídas entre Bahia, Brasília, Ceará, Goiás, Maranhão, Online, Pará, Paraná e Taguatinga.",
+      "error": null
+    },
+    "receita": {
+      "title": "Receita",
+      "analysis": "As receitas de março totalizaram R$ 3.608.000,00, registrando crescimento sequencial pelo segundo mês consecutivo, com alta de 1,3% sobre fevereiro e de 7,3% em relação a janeiro. As receitas de parcelas continuaram como principal componente do faturamento, beneficiadas pela ampliação da base de contratos ativos e pela melhora nos índices de adimplência dos devedores. A unidade do Ceará manteve-se como destaque regional, seguida pelas operações de Brasília e Maranhão.\n\nA consistência no crescimento das receitas ao longo do trimestre demonstra a solidez do modelo de aquisição e recuperação de dívidas da Economy Assessoria. A diversificação geográfica entre 9 filiais proporciona múltiplas fontes de receita, reduzindo a dependência de mercados específicos e criando resiliência frente a variações econômicas regionais. O desempenho de março indica que a capacidade de geração de receita da companhia está se estabilizando em patamares superiores a R$ 3,6 milhões mensais.",
+      "error": null
+    },
+    "despesa": {
+      "title": "Despesa",
+      "analysis": "As despesas de março ficaram em R$ 3.133.000,00, praticamente estáveis em relação aos R$ 3.108.000,00 de fevereiro, evidenciando controle efetivo da base de custos operacionais. Os gastos com compra de dívidas de veículos e dívidas de apreensão mantiveram-se em níveis moderados após o pico de janeiro, enquanto as despesas com ressarcimento de custos da central operacional e salários permaneceram alinhadas ao orçamento previsto.\n\nA estabilidade das despesas em torno de R$ 3,1 milhões demonstra que a estrutura de custos das 9 filiais está sendo administrada com previsibilidade. O fundo de caixa do grupo Economy e os custos operacionais distribuídos entre as unidades refletem o investimento necessário para manter a infraestrutura de recuperação de créditos funcionando em todas as praças. A relação entre despesas fixas e variáveis permanece saudável, permitindo que incrementos de receita se convertam diretamente em melhoria da margem operacional.",
+      "error": null
+    },
+    "fluxo_caixa": {
+      "title": "Fluxo de Caixa",
+      "analysis": "O fluxo de caixa de março foi positivo em R$ 475.000,00, consolidando dois meses consecutivos de geração líquida de caixa e elevando o fluxo acumulado do trimestre para R$ 515.000,00. A consistência na geração de caixa reflete o amadurecimento das carteiras de dívidas e a disciplina no gerenciamento de desembolsos, com o ciclo de conversão de investimentos em recebimentos operando dentro dos parâmetros esperados.\n\nA posição de caixa ao final do primeiro trimestre demonstra que a Economy Assessoria superou o período de maior pressão sobre a liquidez e está entrando no segundo trimestre com capacidade financeira para sustentar tanto as operações correntes quanto novos investimentos em carteiras. A geração de caixa distribuída entre as filiais permite que a tesouraria centralize os recursos excedentes para alocação estratégica nos mercados com maior potencial de retorno.",
+      "error": null
+    },
+    "tesouraria": {
+      "title": "Tesouraria",
+      "analysis": "A tesouraria da Economy Assessoria encerrou o primeiro trimestre em posição favorável, com a geração acumulada de R$ 515.000,00 proporcionando folga de liquidez para as operações do grupo. O fundo de caixa centralizado permitiu a redistribuição eficiente de recursos entre as 9 filiais, atendendo às necessidades operacionais de cada unidade sem comprometer a posição consolidada.\n\nA gestão de tesouraria ao longo de março focou na otimização do capital de giro, acelerando a cobrança de parcelas em atraso e negociando prazos mais favoráveis com fornecedores de serviços operacionais. A posição de caixa confortável ao final do trimestre oferece à companhia flexibilidade para avaliar oportunidades de aquisição de carteiras com condições vantajosas que possam surgir no segundo trimestre, sem necessidade de recorrer a financiamentos externos.",
+      "error": null
+    },
+    "comparativo": {
+      "title": "Comparativo",
+      "analysis": "A evolução trimestral revela uma trajetória consistente de melhoria nos resultados da Economy Assessoria. As receitas cresceram de R$ 3.362.000,00 em janeiro para R$ 3.560.000,00 em fevereiro e R$ 3.608.000,00 em março, totalizando R$ 10.530.000,00 no trimestre. As despesas, por sua vez, recuaram de R$ 3.775.000,00 em janeiro para R$ 3.108.000,00 em fevereiro e R$ 3.133.000,00 em março, somando R$ 10.016.000,00 no período.\n\nO resultado líquido do trimestre de R$ 515.000,00 foi construído pela combinação de crescimento de receitas e redução de despesas, demonstrando a eficácia das ações gerenciais implementadas no início do exercício. A comparação mensal evidencia que a companhia encontrou seu ritmo operacional a partir de fevereiro, com resultados positivos e crescentes que compensaram o déficit de janeiro. As filiais com melhor desempenho comparativo incluem Ceará, Brasília e Maranhão, que se destacam tanto em geração de receita quanto em eficiência de custos.",
+      "error": null
+    }
+  },
+  "conclusao": "O primeiro trimestre de 2026 encerrou com resultado acumulado positivo de R$ 515.000,00, confirmando a capacidade da Economy Assessoria de superar os desafios sazonais do início do ano e construir uma base sólida de resultados. Março foi o mês de melhor desempenho, com lucro de R$ 475.000,00 e margem de 13,2%, evidenciando que a maturação das carteiras de dívidas adquiridas está gerando o retorno esperado pelas operações das 9 filiais.\n\nPara o segundo trimestre, recomenda-se aproveitar a posição favorável de caixa para intensificar seletivamente a aquisição de carteiras em mercados com melhores indicadores de recuperação, priorizando as praças onde a Economy Assessoria possui maior expertise e infraestrutura consolidada. A diretoria deve também avaliar a implementação de métricas de desempenho por filial que permitam identificar e replicar as melhores práticas das unidades mais rentáveis, particularmente os modelos operacionais do Ceará e de Brasília, nas demais operações do grupo."
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-28T15:00:00.000Z",
+  "empresa": "Economy Assessoria",
+  "periodo": "Abril/2026",
+  "year": 2026,
+  "month": 4,
+  "filter": "realizado",
+  "secoes": {
+    "visao_geral": {
+      "title": "Visão Geral",
+      "analysis": "Abril de 2026 apresentou resultado praticamente neutro para a Economy Assessoria, com receitas de R$ 3.684.000,00 e despesas de R$ 3.642.000,00, gerando um lucro operacional de apenas R$ 42.000,00. Embora o mês tenha registrado a maior receita mensal do ano até o momento, o avanço proporcional das despesas reduziu significativamente a margem, que ficou em apenas 1,1%, contrastando com os 13,2% observados em março.\n\nO resultado acumulado do quadrimestre totaliza R$ 557.000,00, mantendo a companhia em território positivo, porém a desaceleração da margem em abril levanta alertas sobre a sustentabilidade do crescimento. A operação consolidada das 9 filiais demanda atenção especial à relação entre investimentos em novas carteiras e capacidade de geração de receita, uma vez que o aumento de R$ 509.000,00 nas despesas em relação a março sugere uma nova rodada de aquisições de dívidas que ainda não se refletiu proporcionalmente nas receitas.",
+      "error": null
+    },
+    "receita": {
+      "title": "Receita",
+      "analysis": "As receitas de abril atingiram R$ 3.684.000,00, novo recorde mensal do exercício, representando crescimento de 2,1% sobre março e de 9,6% em relação a janeiro. O avanço contínuo do faturamento é sustentado pelas receitas de parcelas, que se beneficiam do aumento progressivo da base de contratos ativos nas 9 filiais. As unidades do Ceará, Brasília e Maranhão seguem como principais polos de receita, com contribuição crescente da operação Online.\n\nO patamar de receita mensal acima de R$ 3,6 milhões demonstra que a Economy Assessoria está ampliando consistentemente sua capacidade de geração de faturamento. O acumulado do quadrimestre em receitas totaliza R$ 14.214.000,00, refletindo o amadurecimento das carteiras de dívidas e a efetividade dos processos de recuperação de créditos. A diversificação entre as filiais de Bahia, Goiás, Pará, Paraná e Taguatinga complementa as receitas das unidades líderes, proporcionando uma base de faturamento robusta e menos concentrada.",
+      "error": null
+    },
+    "despesa": {
+      "title": "Despesa",
+      "analysis": "As despesas de abril somaram R$ 3.642.000,00, registrando aumento expressivo de R$ 509.000,00 em relação aos R$ 3.133.000,00 de março, uma alta de 16,2%. Esse salto nas despesas é atribuído principalmente ao incremento na compra de dívidas de veículos e dívidas de apreensão, indicando que a companhia aproveitou a posição de caixa favorável construída no trimestre anterior para investir em novas carteiras de créditos.\n\nAlém dos investimentos em carteiras, as despesas com ressarcimento de custos da central operacional e o fundo de caixa do grupo Economy também apresentaram elevação, possivelmente refletindo a expansão operacional necessária para absorver o volume crescente de contratos em gestão. Os salários distribuídos entre as 9 filiais mantiveram-se relativamente estáveis, indicando que o crescimento de custos está concentrado em rubricas operacionais e de investimento, não em expansão do quadro de pessoal.",
+      "error": null
+    },
+    "fluxo_caixa": {
+      "title": "Fluxo de Caixa",
+      "analysis": "O fluxo de caixa de abril foi marginalmente positivo em R$ 42.000,00, representando uma desaceleração significativa em relação à geração de R$ 475.000,00 em março. Essa redução no fluxo líquido reflete o aumento nos desembolsos para aquisição de carteiras, que consumiram a maior parte da receita gerada no mês. O fluxo acumulado do quadrimestre mantém-se positivo em R$ 557.000,00, preservando a posição de liquidez da companhia.\n\nA quase neutralidade do fluxo de caixa em abril sinaliza que a companhia está operando próxima ao ponto de equilíbrio entre geração e consumo de caixa, situação que requer monitoramento atento da tesouraria. A expectativa é que os investimentos em novas carteiras realizados em abril produzam receitas incrementais nos meses seguintes, restaurando a capacidade de geração de caixa. A gestão do fluxo entre as 9 filiais deve priorizar a alocação eficiente de recursos, evitando que unidades com menor retorno consumam caixa desproporcional ao seu potencial de geração de receita.",
+      "error": null
+    },
+    "tesouraria": {
+      "title": "Tesouraria",
+      "analysis": "A tesouraria da Economy Assessoria manteve posição estável em abril, com a geração líquida mínima de R$ 42.000,00 preservando as reservas acumuladas nos meses anteriores. A redistribuição de recursos entre as filiais via fundo de caixa centralizado continuou operando com eficiência, garantindo liquidez operacional para todas as 9 unidades mesmo no contexto de aumento dos desembolsos para aquisição de carteiras.\n\nA gestão de tesouraria em abril exigiu calibração mais cuidadosa entre a manutenção de reservas prudenciais e o aproveitamento de oportunidades de aquisição de carteiras. Com o acumulado de R$ 557.000,00 em caixa gerado no quadrimestre, a companhia dispõe de colchão suficiente para absorver eventuais meses de resultado negativo sem comprometer as operações. A prioridade para maio deve ser monitorar a conversão dos investimentos de abril em receitas recorrentes.",
+      "error": null
+    },
+    "comparativo": {
+      "title": "Comparativo",
+      "analysis": "A análise comparativa do quadrimestre revela um padrão cíclico nos resultados da Economy Assessoria: janeiro negativo (R$ -412.000,00), fevereiro e março positivos (R$ 452.000,00 e R$ 475.000,00 respectivamente) e abril quase neutro (R$ 42.000,00). As receitas mantêm tendência ascendente consistente, partindo de R$ 3.362.000,00 em janeiro e alcançando R$ 3.684.000,00 em abril, enquanto as despesas apresentam comportamento mais volátil, oscilando entre R$ 3.108.000,00 e R$ 3.775.000,00.\n\nA comparação entre filiais ao longo do quadrimestre indica que as unidades do Ceará e Brasília mantêm desempenho acima da média, com contribuições de receita estáveis e crescentes. O canal Online demonstra potencial de expansão com estrutura de custos mais enxuta. A volatilidade das despesas está concentrada nas rubricas de investimento em carteiras, o que é característico do modelo de negócio e não necessariamente indica descontrole de custos. O desafio para os gestores é suavizar essa volatilidade para proporcionar maior previsibilidade aos resultados mensais.",
+      "error": null
+    }
+  },
+  "conclusao": "Abril de 2026 demonstrou que a Economy Assessoria mantém capacidade de crescimento de receitas, atingindo o recorde mensal de R$ 3.684.000,00, porém a elevação simultânea das despesas para R$ 3.642.000,00 comprimiu a margem para 1,1%, gerando lucro de apenas R$ 42.000,00. O resultado acumulado do quadrimestre permanece positivo em R$ 557.000,00, mas a tendência de estreitamento da margem requer atenção da gestão para evitar que o segundo trimestre comprometa os ganhos construídos no primeiro.\n\nRecomenda-se que a diretoria adote postura mais seletiva na aquisição de carteiras de dívidas em maio e junho, priorizando qualidade sobre volume e concentrando investimentos nas praças com maiores taxas históricas de recuperação. É fundamental que as 9 filiais implementem revisão de seus custos operacionais, identificando oportunidades de racionalização que permitam manter a competitividade sem sacrificar a capacidade de geração de receita. A análise individual de rentabilidade por unidade deve guiar as decisões de alocação de capital para o restante do exercício."
+}

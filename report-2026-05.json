@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-28T15:00:00.000Z",
+  "empresa": "Economy Assessoria",
+  "periodo": "Maio/2026",
+  "year": 2026,
+  "month": 5,
+  "filter": "realizado",
+  "secoes": {
+    "visao_geral": {
+      "title": "Visão Geral",
+      "analysis": "Maio de 2026 representou o mês mais desafiador do exercício para a Economy Assessoria, com receitas de R$ 2.411.000,00 e despesas de R$ 2.842.000,00, resultando em prejuízo operacional de R$ 431.000,00. A queda abrupta nas receitas, que recuaram 34,6% em relação aos R$ 3.684.000,00 de abril, configura o pior desempenho de faturamento do ano e compromete significativamente o resultado acumulado, que se reduz de R$ 557.000,00 para apenas R$ 136.683,45.\n\nO resultado negativo de maio impacta diretamente a posição financeira consolidada das 9 filiais, reduzindo a margem acumulada do ano para 0,8% sobre receitas totais de R$ 16.636.061,50. A deterioração do resultado mensal demanda investigação aprofundada das causas da retração de receitas em cada unidade operacional, particularmente nas filiais de Bahia, Goiás, Pará, Paraná e Taguatinga, para identificar se o fenômeno é localizado ou sistêmico e definir ações corretivas imediatas.",
+      "error": null
+    },
+    "receita": {
+      "title": "Receita",
+      "analysis": "As receitas de maio caíram para R$ 2.411.000,00, o menor patamar mensal do ano, representando uma retração de R$ 1.273.000,00 em relação a abril. A queda nas receitas de parcelas, principal fonte de faturamento da companhia, sugere possível deterioração nos índices de recuperação de créditos ou redução na base de contratos ativos. As unidades do Ceará, Brasília e Maranhão, que vinham liderando a geração de receita, também foram impactadas pela desaceleração.\n\nA análise do acumulado do ano mostra que as receitas de parcelas totalizam R$ 12.948.000,00, seguidas pelas receitas das unidades do Ceará com R$ 979.000,00, Brasília com R$ 882.000,00 e Maranhão com R$ 502.000,00. A concentração significativa do faturamento em receitas de parcelas, que representam aproximadamente 78% do total, expõe a vulnerabilidade do modelo a oscilações na taxa de adimplência dos devedores. A queda em maio pode indicar esgotamento de carteiras antigas sem reposição adequada de novos contratos geradores de receita.",
+      "error": null
+    },
+    "despesa": {
+      "title": "Despesa",
+      "analysis": "As despesas de maio totalizaram R$ 2.842.000,00, apresentando redução de R$ 800.000,00 em relação a abril, porém insuficiente para compensar a queda ainda mais acentuada nas receitas. Entre as principais rubricas de despesa acumuladas no ano, a compra de dívidas de veículos representa R$ 3.816.000,00, seguida pelo ressarcimento de custos da central operacional com R$ 3.154.000,00, fundo de caixa do grupo Economy com R$ 2.827.000,00, compra de dívidas de apreensão com R$ 1.030.000,00 e salários com R$ 998.000,00.\n\nA redução das despesas em maio indica que a gestão reagiu à contração de receitas moderando os investimentos em novas carteiras. No entanto, a estrutura de custos fixos distribuída entre as 9 filiais impõe um piso de despesas que não pode ser comprimido na mesma proporção da queda de receitas. Os custos com salários, ressarcimento da central operacional e fundo de caixa possuem natureza recorrente e representam o custo de manutenção da capacidade operacional do grupo, exigindo que o volume de receitas se recupere para restabelecer a rentabilidade.",
+      "error": null
+    },
+    "fluxo_caixa": {
+      "title": "Fluxo de Caixa",
+      "analysis": "O fluxo de caixa de maio registrou saída líquida de R$ 431.000,00, a maior queima de caixa desde janeiro, reduzindo substancialmente as reservas acumuladas ao longo do exercício. O fluxo líquido acumulado no ano recua para R$ 136.683,45, revelando a fragilidade da posição de caixa da companhia quando as receitas sofrem retração significativa. A capacidade de autofinanciamento da operação está comprometida no curto prazo.\n\nA saída de caixa em maio coloca em evidência a necessidade de a Economy Assessoria desenvolver mecanismos de proteção contra oscilações de receita, seja através da constituição de reservas mais robustas nos meses de resultado positivo, seja pela diversificação das fontes de receita. O fluxo de caixa das 9 filiais deve ser analisado individualmente para identificar quais unidades estão consumindo caixa de forma desproporcional e quais mantêm capacidade de geração mesmo no cenário adverso de maio.",
+      "error": null
+    },
+    "tesouraria": {
+      "title": "Tesouraria",
+      "analysis": "A tesouraria da Economy Assessoria encerrou maio em situação de alerta, com a queima de caixa de R$ 431.000,00 reduzindo as reservas acumuladas no ano para apenas R$ 136.683,45. A posição de liquidez é a mais apertada desde o início do exercício, exigindo gestão conservadora dos recursos disponíveis e possível reavaliação dos compromissos financeiros programados para junho. O fundo de caixa centralizado do grupo opera com margens reduzidas para redistribuição entre as filiais.\n\nA gestão de tesouraria para os próximos meses deve priorizar a preservação de caixa, limitando desembolsos para aquisição de carteiras ao mínimo necessário para manter o pipeline de receitas futuras. A companhia precisa avaliar se as condições atuais de mercado justificam a manutenção da operação em todas as 9 praças ou se uma concentração temporária de recursos nas unidades mais rentáveis seria mais prudente. A negociação de prazos com fornecedores e a aceleração de cobranças devem ser intensificadas para recompor a posição de caixa.",
+      "error": null
+    },
+    "comparativo": {
+      "title": "Comparativo",
+      "analysis": "Maio de 2026 interrompeu bruscamente a trajetória de crescimento de receitas que vinha sendo construída desde janeiro. Enquanto as receitas cresceram consistentemente de R$ 3.362.000,00 em janeiro para R$ 3.684.000,00 em abril, maio registrou queda de 34,6% para R$ 2.411.000,00. As despesas, embora também tenham recuado de R$ 3.642.000,00 em abril para R$ 2.842.000,00 em maio, não compensaram a magnitude da retração de receitas, gerando o segundo pior resultado mensal do ano, com prejuízo de R$ 431.000,00.\n\nA comparação dos cinco meses evidencia que a Economy Assessoria operou com dois meses negativos (janeiro com R$ -412.000,00 e maio com R$ -431.000,00), dois meses fortemente positivos (fevereiro com R$ 452.000,00 e março com R$ 475.000,00) e um mês neutro (abril com R$ 42.000,00). A volatilidade dos resultados mensais, com amplitude de R$ 906.000,00 entre o melhor e o pior mês, representa um desafio para o planejamento financeiro e reforça a necessidade de mecanismos de estabilização que suavizem o impacto das oscilações sazonais e de mercado sobre o resultado consolidado das 9 filiais.",
+      "error": null
+    }
+  },
+  "conclusao": "Maio de 2026 representou um revés significativo para a Economy Assessoria, com prejuízo de R$ 431.000,00 que corroeu grande parte dos ganhos acumulados nos meses anteriores, reduzindo o lucro do exercício para R$ 136.683,45 com margem de apenas 0,8%. A queda de 34,6% nas receitas, combinada com a rigidez parcial da base de custos das 9 filiais, expõe a vulnerabilidade do modelo de negócio a oscilações na taxa de recuperação de créditos e na conversão de carteiras em receita recorrente.\n\nA diretoria deve tratar o resultado de maio como sinal de alerta e implementar medidas imediatas de proteção da liquidez e recuperação da rentabilidade. Recomenda-se a realização de diagnóstico detalhado por filial para identificar as causas específicas da queda de receitas em cada praça, a suspensão temporária de aquisições de carteiras até que o fluxo de caixa se estabilize, e a intensificação dos esforços de cobrança nas carteiras existentes para maximizar a conversão em receita. A companhia deve também avaliar a viabilidade econômica de cada uma das 9 unidades operacionais, considerando eventual redimensionamento daquelas que não apresentam perspectiva de retorno compatível com o custo de operação."
+}
