@@ -2,7 +2,7 @@ module.exports = {
   cliente: {
     nome: "Economy Assessoria",
     subdomain: "economy-bi",
-    coolify_app_uuid: "",
+    coolify_app_uuid: "m34c4bv4igxny9jtq6peldpx",
     cor_primaria: "#f59e0b",
   },
   fontes: {
