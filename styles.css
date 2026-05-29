@@ -1,20 +1,20 @@
-/* BGP Finance — adapted from BGP project visual */
+/* Economy Assessoria — paleta azul #2588E5 */
 :root {
-  --bg: #05080a;
-  --bg-1: #080c0f;
-  --surface: #0d1216;
-  --surface-2: #11181d;
-  --surface-3: #161f25;
-  --border: #1a242a;
-  --border-2: #243038;
+  --bg: #060a12;
+  --bg-1: #080d16;
+  --surface: #0c1320;
+  --surface-2: #101a2a;
+  --surface-3: #152133;
+  --border: #1a2840;
+  --border-2: #1f3352;
   --text: #ffffff;
   --fg: #ffffff;
-  --text-2: #b8c2c8;
-  --fg-2: #b8c2c8;
-  --mute: #6b7680;
-  --fg-3: #6b7680;
-  --mute-2: #3a4348;
-  --fg-4: #3a4348;
+  --text-2: #b0c4d8;
+  --fg-2: #b0c4d8;
+  --mute: #5a7a94;
+  --fg-3: #5a7a94;
+  --mute-2: #2a3e54;
+  --fg-4: #2a3e54;
 
   --cyan: #2588E5;
   --cyan-2: #1F71BE;
@@ -38,11 +38,11 @@
   --amber: #FA9100;
   --violet: #2588E5;
 
-  --line: #1a242a;
-  --line-soft: #161c26;
-  --line-strong: #243038;
-  --bg-3: #11181d;
-  --bg-4: #161f25;
+  --line: #1a2840;
+  --line-soft: #121d30;
+  --line-strong: #1f3352;
+  --bg-3: #101a2a;
+  --bg-4: #152133;
 
   --radius: 14px;
   --radius-sm: 10px;
