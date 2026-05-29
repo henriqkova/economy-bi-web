@@ -35,7 +35,7 @@ else
   COOLIFY_UUID=$(node -e "console.log(require('./bi.config.js').cliente.coolify_app_uuid || '')")
   if [ -n "$COOLIFY_UUID" ]; then
     curl -s "http://187.77.238.125:8000/api/v1/deploy?uuid=${COOLIFY_UUID}&force=true" \
-      -H "Authorization: Bearer 64|DEcDq8sA5xsNNmIkh6GT3jESy4xFECv3cdB9th1r6ccb6095" \
+      -H "Authorization: Bearer 65|5CttTqJxkiaZtcec5QYOF6rMfVEQmeZoM9vnyHb793117252" \
       -H "Accept: application/json"
     echo ""
     echo "Deploy disparado no Coolify."

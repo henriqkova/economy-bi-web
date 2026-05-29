@@ -60,6 +60,9 @@ const Sidebar = ({ active, onSelect, open }) => {
     { id: "detalhado", icon: "report", label: "Detalhado" },
     { id: "profunda_cliente", icon: "user", label: "Profunda Cliente" },
     { id: "crm", icon: "money", label: "CRM" },
+    { id: "consolidado", icon: "chart", label: "Visão Consolidada" },
+    { id: "vendas", icon: "money", label: "Vendas" },
+    { id: "cancelamentos", icon: "expense", label: "Cancelamentos" },
     { id: "settings", icon: "settings", label: "Configurações", badge: "EM BREVE" },
   ];
   // Modo da page (active/upsell/hidden) injetado pelo build-jsx.cjs a partir do bi.config.js
@@ -124,6 +127,9 @@ const PAGE_TITLES = {
   detalhado: "Detalhado",
   profunda_cliente: "Profunda Cliente",
   crm: "CRM",
+  consolidado: "Visão Consolidada",
+  vendas: "Vendas",
+  cancelamentos: "Cancelamentos",
 };
 
 const DATE_RANGES = [
@@ -208,6 +214,9 @@ const BI_EXPORT_PAGES = [
   { id: "crm", label: "16 CRM" },
   { id: "orcamento", label: "17 Orçamento" },
   { id: "dre", label: "18 DRE" },
+  { id: "consolidado", label: "19 Visão Consolidada" },
+  { id: "vendas", label: "20 Vendas" },
+  { id: "cancelamentos", label: "21 Cancelamentos" },
 ];
 
 const BiExportButton = ({ statusFilter, year, month, filters }) => {
@@ -282,6 +291,13 @@ const Header = ({ page, onToggleSidebar, statusFilter, setStatusFilter, year, se
     for (var i = 0; i < tx.length; i++) { if (tx[i][9] === rg && tx[i][3]) cats.add(tx[i][3]); }
     return ["Todas categorias", ...Array.from(cats).sort()];
   }, [filters && filters.regime]);
+  const allEmpresas = useMemo(() => {
+    const tx = window.ALL_TX || [];
+    const rg = (filters && filters.regime === "competencia") ? "k" : "c";
+    const emps = new Set();
+    for (var i = 0; i < tx.length; i++) { if (tx[i][9] === rg && tx[i][8]) emps.add(tx[i][8]); }
+    return emps.size > 1 ? ["Todas empresas", ...Array.from(emps).sort()] : [];
+  }, [filters && filters.regime]);
   const dias = useMemo(() => {
     var d = [{ v: 0, l: "Todos" }];
     for (var i = 1; i <= 31; i++) d.push({ v: i, l: "" + i });
@@ -289,27 +305,44 @@ const Header = ({ page, onToggleSidebar, statusFilter, setStatusFilter, year, se
   }, []);
   const updateFilter = (patch) => setFilters && setFilters(Object.assign({}, filters, patch));
   return (
-    <header className="header">
-      <button className="hd-icon-btn hd-menu-btn" title="Menu" onClick={onToggleSidebar}><Icon name="menu" /></button>
-      <div className="breadcrumb">
-        <img src="assets/bgp-logo-white.png" alt="Clair Clinic" style={{ height: 36, width: "auto", borderRadius: 4, marginRight: 6 }} />
-        <Icon name="chevronRight" />
-        <span>BI Financeiro</span>
-        <Icon name="chevronRight" />
-        <b>{PAGE_TITLES[page] || "Visão Geral"}</b>
+    <header className="header header-two-row">
+      <div className="header-top">
+        <button className="hd-icon-btn hd-menu-btn" title="Menu" onClick={onToggleSidebar}><Icon name="menu" /></button>
+        <div className="breadcrumb">
+          <img src="assets/bgp-logo-white.png" alt="Logo" style={{ height: 36, width: "auto", borderRadius: 4, marginRight: 6 }} />
+          <Icon name="chevronRight" />
+          <span>BI Financeiro</span>
+          <Icon name="chevronRight" />
+          <b>{PAGE_TITLES[page] || "Visão Geral"}</b>
+        </div>
+        <div style={{ flex: 1 }} />
+        {setStatusFilter && <StatusFilterSeg value={statusFilter} onChange={setStatusFilter} />}
+        <BiExportButton statusFilter={statusFilter} year={year} month={month} filters={filters} />
       </div>
-      <div style={{ flex: 1 }} />
-      <div className="hd-filters" style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", overflow: "visible" }}>
-        <label style={{ fontSize: 10, color: "var(--mute)", textTransform: "uppercase", letterSpacing: "0.05em" }}>De</label>
-        <input type="date" className="header-year" value={(filters && filters.dateFrom) || ""} onChange={e => updateFilter({ dateFrom: e.target.value })} style={{ width: 130, fontSize: 12 }} />
-        <label style={{ fontSize: 10, color: "var(--mute)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Até</label>
-        <input type="date" className="header-year" value={(filters && filters.dateTo) || ""} onChange={e => updateFilter({ dateTo: e.target.value })} style={{ width: 130, fontSize: 12 }} />
-        <select className="header-year" value={(filters && filters.categoria) || "Todas categorias"} onChange={e => updateFilter({ categoria: e.target.value })} title="Filtrar por categoria" style={{ maxWidth: 200, fontSize: 12 }}>
-          {allCats.map(c => <option key={c} value={c}>{c}</option>)}
-        </select>
+      <div className="header-filters">
+        <div className="hd-filter-group">
+          <label className="hd-filter-label">De</label>
+          <input type="date" className="header-year" value={(filters && filters.dateFrom) || ""} onChange={e => updateFilter({ dateFrom: e.target.value })} />
+        </div>
+        <div className="hd-filter-group">
+          <label className="hd-filter-label">Até</label>
+          <input type="date" className="header-year" value={(filters && filters.dateTo) || ""} onChange={e => updateFilter({ dateTo: e.target.value })} />
+        </div>
+        <div className="hd-filter-group" style={{ flex: "1 1 160px" }}>
+          <label className="hd-filter-label">Categoria</label>
+          <select className="header-year" value={(filters && filters.categoria) || "Todas categorias"} onChange={e => updateFilter({ categoria: e.target.value })} title="Filtrar por categoria">
+            {allCats.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </div>
+        {allEmpresas.length > 0 && (
+          <div className="hd-filter-group" style={{ flex: "1 1 160px" }}>
+            <label className="hd-filter-label">Empresa</label>
+            <select className="header-year" value={(filters && filters.empresa) || "Todas empresas"} onChange={e => updateFilter({ empresa: e.target.value })} title="Filtrar por empresa">
+              {allEmpresas.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+        )}
       </div>
-      {setStatusFilter && <StatusFilterSeg value={statusFilter} onChange={setStatusFilter} />}
-      <BiExportButton statusFilter={statusFilter} year={year} month={month} filters={filters} />
     </header>
   );
 };
@@ -624,9 +657,10 @@ const Donut = ({ segments, size = 180, thickness = 22 }) => {
 
 // Horizontal bar list (with thin track) — used for bank balances/category
 // onItemClick(item, idx) torna a linha clicavel; activeName destaca a linha ativa.
-const BarListLine = ({ items, color = "cyan", onItemClick, activeName }) => {
+const BarListLine = ({ items, color = "cyan", onItemClick, activeName, formatter }) => {
   const max = Math.max(...items.map(it => it.value));
   const hasActive = activeName != null;
+  const fmtVal = formatter || (window.BIT && window.BIT.fmt) || (v => String(v));
   return (
     <div className="bar-list with-bars">
       {items.map((it, i) => {
@@ -642,7 +676,7 @@ const BarListLine = ({ items, color = "cyan", onItemClick, activeName }) => {
           >
             <div className="row-meta">
               <span className="label">{it.name}</span>
-              <span className="val">{window.BIT.fmt(it.value)}</span>
+              <span className="val">{fmtVal(it.value)}</span>
             </div>
             <div className="track"><div className={`fill ${color}`} style={{ width: `${w}%` }} /></div>
           </div>
@@ -674,13 +708,12 @@ const BarListLegend = ({ items, total }) => {
   );
 };
 
-const BarList = ({ items, color = "green", valueKey = "value", labelKey = "name", onItemClick, activeName }) => {
+const BarList = ({ items, color = "green", valueKey = "value", labelKey = "name", onItemClick, activeName, formatter }) => {
   const mapped = items.map(it => ({ name: it[labelKey], value: it[valueKey] }));
-  // se vier onItemClick, propaga o item ORIGINAL (nao o mapeado) pra page poder usar campos extras
   const handler = onItemClick
     ? (mappedIt, idx) => onItemClick(items[idx], idx)
     : undefined;
-  return <BarListLine items={mapped} color={color} onItemClick={handler} activeName={activeName} />;
+  return <BarListLine items={mapped} color={color} onItemClick={handler} activeName={activeName} formatter={formatter} />;
 };
 
 const DivergingBars = ({ values, labels }) => {

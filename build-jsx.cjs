@@ -25,6 +25,8 @@ const SOURCES = [
   'pages-4.jsx',
   'page-orcamento.jsx',
   'page-dre.jsx',
+  'page-vendas.jsx',
+  'page-consolidado.jsx',
   'upsell-pages.jsx',
 ];
 
@@ -299,6 +301,65 @@ const PAGE_MODE_INJECT = `\n// Injetado por build-jsx.cjs a partir de bi.config.
             ws['!cols'] = [{wch:35},{wch:16},{wch:16},{wch:16},{wch:14}];
             XLSX.utils.book_append_sheet(wb, ws, '17 Orcamento');
           }
+          if (pid === 'vendas' || pid === 'consolidado') {
+            var EXV = window.BIT_EXTRAS && window.BIT_EXTRAS.vendas;
+            if (EXV && EXV.rows) {
+              var vRows = EXV.rows;
+              if (filters && filters.empresa && filters.empresa !== 'Todas empresas') vRows = vRows.filter(function(v){return v.empresa === filters.empresa;});
+              if (filters && filters.dateFrom) vRows = vRows.filter(function(v){return (v.data||'') >= filters.dateFrom;});
+              if (filters && filters.dateTo) vRows = vRows.filter(function(v){return (v.data||'') <= filters.dateTo;});
+              var header = ['Data', 'Empresa', 'Cliente', 'Vendedor', 'Valor Total', 'Comissão', 'Tags'];
+              var rows = [header];
+              vRows.forEach(function(v) {
+                rows.push([v.data || '', v.empresa || '', v.cliente || '', v.vendedor || '', fmt(v.valorTotal), fmt(v.comissao || 0), v.tags || '']);
+              });
+              var ws = XLSX.utils.aoa_to_sheet(rows);
+              ws['!cols'] = [{wch:12},{wch:22},{wch:35},{wch:25},{wch:16},{wch:14},{wch:20}];
+              XLSX.utils.book_append_sheet(wb, ws, pid === 'consolidado' ? '19a Vendas' : '20 Vendas');
+            }
+          }
+          if (pid === 'cancelamentos' || pid === 'consolidado') {
+            var EXC = window.BIT_EXTRAS && window.BIT_EXTRAS.cancelamentos;
+            if (EXC && EXC.rows) {
+              var cRows = EXC.rows;
+              if (filters && filters.empresa && filters.empresa !== 'Todas empresas') cRows = cRows.filter(function(v){return v.empresa === filters.empresa;});
+              if (filters && filters.dateFrom) cRows = cRows.filter(function(v){return (v.dataCancelamento||'') >= filters.dateFrom;});
+              if (filters && filters.dateTo) cRows = cRows.filter(function(v){return (v.dataCancelamento||'') <= filters.dateTo;});
+              var header = ['Data Cancelamento', 'Empresa', 'Cliente', 'Vendedor', 'Tipo', 'Valor Total'];
+              var rows = [header];
+              cRows.forEach(function(c) {
+                rows.push([c.dataCancelamento || '', c.empresa || '', c.cliente || '', c.vendedor || '', c.tipo || '', fmt(c.valorTotal)]);
+              });
+              var ws = XLSX.utils.aoa_to_sheet(rows);
+              ws['!cols'] = [{wch:16},{wch:22},{wch:35},{wch:25},{wch:30},{wch:16}];
+              XLSX.utils.book_append_sheet(wb, ws, pid === 'consolidado' ? '19b Cancelamentos' : '21 Cancelamentos');
+            }
+          }
+          if (pid === 'consolidado') {
+            var rows = [['Indicador', 'Valor']];
+            rows.push(['Receita', fmt(B.TOTAL_RECEITA)]);
+            rows.push(['Despesa', fmt(B.TOTAL_DESPESA)]);
+            rows.push(['Resultado Líquido', fmt(B.VALOR_LIQUIDO)]);
+            rows.push(['Margem Líquida', pctF(B.MARGEM_LIQUIDA)]);
+            var EXV2 = window.BIT_EXTRAS && window.BIT_EXTRAS.vendas;
+            var EXC2 = window.BIT_EXTRAS && window.BIT_EXTRAS.cancelamentos;
+            if (EXV2) {
+              rows.push(['Vendas Total', fmt(EXV2.totais ? EXV2.totais.totalVendas : 0)]);
+              rows.push(['N° Vendas', EXV2.totais ? EXV2.totais.numVendas : 0]);
+              rows.push(['Comissão Total', fmt(EXV2.totais ? EXV2.totais.comissaoTotal : 0)]);
+            }
+            if (EXC2) {
+              rows.push(['Cancelamentos Total', fmt(EXC2.totais ? EXC2.totais.valorCancelado : 0)]);
+              rows.push(['N° Cancelamentos', EXC2.totais ? EXC2.totais.qtdCancelamentos : 0]);
+            }
+            rows.push([]); rows.push(['Mês', 'Receita', 'Despesa', 'Líquido']);
+            (B.MONTH_DATA || []).forEach(function(m) {
+              rows.push([m.m, fmt(m.receita), fmt(m.despesa), fmt(m.receita - m.despesa)]);
+            });
+            var ws = XLSX.utils.aoa_to_sheet(rows);
+            ws['!cols'] = [{wch:22},{wch:16},{wch:16},{wch:16}];
+            XLSX.utils.book_append_sheet(wb, ws, '19 Consolidado');
+          }
         });
 
         if (wb.SheetNames.length === 0) {
@@ -410,6 +471,9 @@ const PAGE_MODE_INJECT = `\n// Injetado por build-jsx.cjs a partir de bi.config.
       crm: PageCRM,
       orcamento: PageOrcamento,
       dre: PageDRE,
+      vendas: PageVendas,
+      cancelamentos: PageCancelamentos,
+      consolidado: PageConsolidado,
     };
     // Modo da page atual: 'active' (default), 'upsell' (mostra UpsellPage), 'hidden' (não renderiza)
     var pageMode = (window.BI_PAGE_MODE && window.BI_PAGE_MODE[page]) || 'active';

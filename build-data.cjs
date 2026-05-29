@@ -787,6 +787,9 @@ function filterTx(allTx, statusFilter, drilldown, regime, extraFilters) {
     if (extraFilters.diaTo && extraFilters.diaTo > 0) {
       out = out.filter(function(r) { return r[2] <= extraFilters.diaTo; });
     }
+    if (extraFilters.empresa && extraFilters.empresa !== "Todas empresas") {
+      out = out.filter(function(r) { return r[8] === extraFilters.empresa; });
+    }
   }
   return out;
 }
@@ -840,10 +843,12 @@ window.REF_YEAR = REF_YEAR;
 window.AVAILABLE_YEARS = AVAILABLE_YEARS;
 window.aggregateTx = aggregateTx;
 window.filterTx = filterTx;
-// getBit: SEMPRE recomputa via recomputeBit (sem cache de window.BIT).
-// Evita lag no toggle Previsto/Realizado e suporta year/month arbitrario.
-// month: 0 = ano completo, 1-12 = mes especifico.
-// regime: 'caixa' | 'competencia' (default 'caixa')
+// Cache LRU para getBit — evita recompute repetido com mesmos params
+var _bitCache = new Map();
+var _bitCacheMax = 16;
+function _bitCacheKey(sf, dd, y, regime, ef) {
+  return sf + '|' + (dd ? dd.type + ':' + dd.value : '-') + '|' + y + '|' + (regime || 'caixa') + '|' + (ef ? JSON.stringify(ef) : '-');
+}
 window.getBit = function (statusFilter, drilldown, year, month, regime, extraFilters) {
   const sf = statusFilter || window.BIT_FILTER || 'realizado';
   const y = year || window.REF_YEAR;
@@ -853,8 +858,15 @@ window.getBit = function (statusFilter, drilldown, year, month, regime, extraFil
     const ym = y + '-' + mm;
     dd = { type: 'mes', value: ym, label: ym };
   }
-  return window.recomputeBit(sf, dd, y, regime, extraFilters);
+  var key = _bitCacheKey(sf, dd, y, regime, extraFilters);
+  if (_bitCache.has(key)) return _bitCache.get(key);
+  var result = window.recomputeBit(sf, dd, y, regime, extraFilters);
+  if (_bitCache.size >= _bitCacheMax) { var first = _bitCache.keys().next().value; _bitCache.delete(first); }
+  _bitCache.set(key, result);
+  return result;
 };
+// Invalidate cache when statusFilter changes
+window._invalidateBitCache = function() { _bitCache.clear(); };
 // Cross-filter helper: combina statusFilter + drilldown + regime e retorna BIT-like
 // com KPIs/charts/extrato recalculados em ~10ms (17k rows).
 window.recomputeBit = function (statusFilter, drilldown, year, regime, extraFilters) {
