@@ -1333,7 +1333,7 @@ node generate-report.cjs --force
       {/* Relatorio imprimivel */}
       <article className="report">
         <header className="report-cover">
-          <img src="assets/bgp-logo-white.png" alt="BGP" className="report-logo" />
+          <img src="assets/economy-logo.png" alt="BGP" className="report-logo" />
           <h1 className="report-title">BGP GO BI — Relatório Executivo</h1>
           <p className="report-subtitle">{report.empresa}</p>
           <p className="report-meta">Período: {report.periodo} — Realizado</p>

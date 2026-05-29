@@ -92,7 +92,7 @@ const Sidebar = ({ active, onSelect, open }) => {
   return (
     <aside className={`sidebar ${open ? "open" : ""}`}>
       <div className="sb-brand">
-        <img src="assets/bgp-logo-white.png" alt="Clair Clinic" className="sb-logo-img" style={{ height: 64, width: "auto", borderRadius: 6 }} />
+        <img src="assets/economy-logo.png" alt="Clair Clinic" className="sb-logo-img" style={{ height: 64, width: "auto", borderRadius: 6 }} />
       </div>
       <div className="sb-section">Geral</div>
       {general.map(renderItem)}
@@ -309,7 +309,7 @@ const Header = ({ page, onToggleSidebar, statusFilter, setStatusFilter, year, se
       <div className="header-top">
         <button className="hd-icon-btn hd-menu-btn" title="Menu" onClick={onToggleSidebar}><Icon name="menu" /></button>
         <div className="breadcrumb">
-          <img src="assets/bgp-logo-white.png" alt="Logo" style={{ height: 36, width: "auto", borderRadius: 4, marginRight: 6 }} />
+          <img src="assets/economy-logo.png" alt="Logo" style={{ height: 36, width: "auto", borderRadius: 4, marginRight: 6 }} />
           <Icon name="chevronRight" />
           <span>BI Financeiro</span>
           <Icon name="chevronRight" />
