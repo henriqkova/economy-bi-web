@@ -100,10 +100,10 @@ const Sidebar = ({ active, onSelect, open }) => {
       {others.map(renderItem)}
       <div className="sb-spacer" />
       <div className="sb-user">
-        <div className="avatar">CC</div>
+        <img src="assets/sr-parcelinha.png" alt="Sr. Parcelinha" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover" }} />
         <div className="who">
           <b>{(window.BIT_META && window.BIT_META.empresa && window.BIT_META.empresa.nome_fantasia) || "Cliente"}</b>
-          <span>{(window.BIT_META && window.BIT_META.empresa && window.BIT_META.empresa.cidade) || "Cliente · BGP GO"}</span>
+          <span>Sr. Parcelinha · Economy</span>
         </div>
       </div>
     </aside>
